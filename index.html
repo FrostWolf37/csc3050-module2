@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Featured Video Games Showcase</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="page-header">
+    <h1>Featured Video Games</h1>
+    <p>A quick look at my favorite games.</p>
+  </header>
+
+  <main class="main-container">
+    <section class="card-grid" aria-label="Featured video games catalog">
+      
+      <!-- Card 1 -->
+      <article class="game-card">
+        <figure class="card-media">
+          <img 
+            src="images/hades2.jpg" 
+            alt="Hades 2 cover art"
+          >
+        </figure>
+        <div class="card-body">
+          <span class="genre-tag">Action / Greek Mythology</span>
+          <h2 class="card-title">Hades II</h2>
+          <p class="release-info">
+            Released: <time datetime="2025-09-25">September 25, 2025</time>
+          </p>
+          <p class="card-description">
+            Battle through Olympus and the Underworld as Melinoë(Daughter of Hades) to defeat Chronos, Titan of Time and save her family.
+          </p>
+          <div class="expandable-content" hidden>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Wield dark magic and witching arts beyond the Underworld</li>
+              <li>Battle past the forces of Chronos, the Titan of Time</li>
+              <li>Use Mythical Boons to aid you from Olympic Gods, like Zeus and Poseidon</li>
+            </ul>
+          </div>
+          <button type="button" class="toggle-btn" aria-expanded="false">
+            Show More
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="game-card">
+        <figure class="card-media">
+          <img 
+            src="images/eldenring.jpg" 
+            alt="Elden Ring Cover Art"
+          >
+        </figure>
+        <div class="card-body">
+          <span class="genre-tag">Adventure / Survival</span>
+          <h2 class="card-title">Elden Ring</h2>
+          <p class="release-info">
+            Released: <time datetime="2022-02-24">February 24, 2022</time>
+          </p>
+          <p class="card-description">
+            Explore a haunting, broken world ruled by corrupted demigods and forge your own path to become the new ruler of the Lands Between.
+          </p>
+          <div class="expandable-content" hidden>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Vast open world of the Lands Between</li>
+              <li>Challenging boss encounters with intense combat mechanics</li>
+              <li>Deep build flexibility for melee, sorcery, and incantations</li>
+            </ul>
+          </div>
+          <button type="button" class="toggle-btn" aria-expanded="false">
+            Show More
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="game-card">
+        <figure class="card-media">
+          <img 
+            src="images/warcraft.jpg" 
+            alt="World of Warcraft Cover Art"
+          >
+        </figure>
+        <div class="card-body">
+          <span class="genre-tag">MMO-RPG</span>
+          <h2 class="card-title">World of Warcraft</h2>
+          <p class="release-info">
+            Released: <time datetime="2004-11-23">November 23, 2004</time>
+          </p>
+          <p class="card-description">
+            Join millions of players across Azeroth, and take on legendary dungeons, raids, and world-shattering threats.
+          </p>
+          <div class="expandable-content" hidden>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Massive world spanning dozens of continents and expansions</li>
+              <li>Diverse characters customization across multiple races</li>
+              <li>Play any of the 13 unique playable classes from Warriors, Paladins, Mages, Druids, Hunters, etc!</li>
+            </ul>
+          </div>
+          <button type="button" class="toggle-btn" aria-expanded="false">
+            Show More
+          </button>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
