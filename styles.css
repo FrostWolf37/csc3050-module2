@@ -1,0 +1,179 @@
+/* =========================================
+   1. Global Reset & Box Sizing
+   ========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================================
+   2. Base Body & Typography
+   ========================================= */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  background-color: #0f172a; /* Sleek dark theme background */
+  color: #e2e8f0;            /* Off-white text for comfortable contrast */
+  padding: 2rem 1rem;
+}
+
+/* =========================================
+   3. Page Header
+   ========================================= */
+.page-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.page-header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.page-header p {
+  color: #94a3b8;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   4. Main Container & Grid Layout
+   ========================================= */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+/* =========================================
+   5. Card Container & Media
+   ========================================= */
+.game-card {
+  background-color: #1e293b; /* Distinct slate card background */
+  border-radius: 12px;
+  overflow: hidden;          /* Keeps the image corners rounded */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+              0 2px 4px -2px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+.card-media {
+  width: 100%;
+  height: 240px;             /* Uniform height for every cover image */
+  overflow: hidden;
+  background-color: #0b1120; /* Placeholder color while images load */
+}
+
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Fills the 240px space without distorting */
+  display: block;
+}
+
+/* =========================================
+   6. Card Body & Typography
+   ========================================= */
+.card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.genre-tag {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: #334155;
+  color: #38bdf8;            /* Soft cyan accent */
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;     /* Pill badge shape */
+  margin-bottom: 0.75rem;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 0.25rem;
+}
+
+.release-info {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+/* =========================================
+   7. Expandable Content & Lists
+   ========================================= */
+.expandable-content h3 {
+  font-size: 1rem;
+  color: #f1f5f9;
+  margin-bottom: 0.5rem;
+}
+
+.expandable-content ul {
+  list-style-position: inside;
+  margin-bottom: 1.25rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.expandable-content li {
+  margin-bottom: 0.35rem;
+}
+
+/* =========================================
+   8. Toggle Button
+   ========================================= */
+.toggle-btn {
+  margin-top: auto;          /* Pins button cleanly to bottom */
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f8fafc;
+  background-color: #2563eb; /* Vibrant blue */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.toggle-btn:active {
+  transform: scale(0.98);
+}
