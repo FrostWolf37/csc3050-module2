@@ -1,97 +1,90 @@
-/* =========================================
-   1. Global Reset & Box Sizing
-   ========================================= */
+/* ----- 1. Global Reset & Box Sizing ------*/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0;  /* helps strip away default browser margins*/
   padding: 0;
 }
 
-/* =========================================
-   2. Base Body & Typography
-   ========================================= */
+/* -----  2. Base Body & Typograph----- */
+
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.6;
-  background-color: #0f172a; /* Sleek dark theme background */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;  /*tells browser to use default UI font already installed on OS */
+  line-height: 1.6;     /*adds size between fonts for readability */
+  background-color: #0f172a; /* deep navy background color */
   color: #e2e8f0;            /* Off-white text for comfortable contrast */
-  padding: 2rem 1rem;
+  padding: 2rem 1rem;   /*adds padding so cards and headers won't press right up to edges of browser */
 }
 
-/* =========================================
-   3. Page Header
-   ========================================= */
+/*-----3. Page Header-----*/
+
 .page-header {
-  text-align: center;
-  max-width: 800px;
+  text-align: center;   /* centers the header */
+  max-width: 800px;  /*stops headers from stretching uncomfortably acrossa wide screen monitor */
   margin: 0 auto 3rem auto;
 }
 
 .page-header h1 {
   font-size: 2.25rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #f8fafc;  /*bright white color */
   margin-bottom: 0.5rem;
 }
 
 .page-header p {
-  color: #94a3b8;
+  color: #94a3b8;  /*slate gray color */
   font-size: 1.1rem;
 }
 
-/* =========================================
-   4. Main Container & Grid Layout
-   ========================================= */
+/*----- 4. Main Container & Grid Layout------*/
+
 .main-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;  /*cap an ultra-wide monitor so it won't stretch so wide it looks weird */
+  margin: 0 auto;  /*if screen is wider than 1200px, take remaining space and distribute evenly to left/right so it keeps cards centers */
 }
 
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: grid;  /*turns cards into grid items */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /*a card will never shrink less than 300px */
   gap: 2rem;
   align-items: start;
 }
 
-/* =========================================
-   5. Card Container & Media
-   ========================================= */
-.game-card {
-  background-color: #1e293b; /* Distinct slate card background */
-  border-radius: 12px;
+/* ------ 5. Card Container & Media ------*/
+
+.game-card { /* outer shell of the cards */
+  background-color: #1e293b; /* lighter slate blue */
+  border-radius: 12px;  /*curves outer corners */
   overflow: hidden;          /* Keeps the image corners rounded */
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
-              0 2px 4px -2px rgba(0, 0, 0, 0.3);
+              0 2px 4px -2px rgba(0, 0, 0, 0.3);  /*adds shadow so cards look elevated*/
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.game-card:hover {
+.game-card:hover {  /* adds some 3d effects to the card */
   transform: translateY(-4px);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
 }
 
 .card-media {
   width: 100%;
-  height: 240px;             /* Uniform height for every cover image */
+  height: 500px;             /* height of the card photo */
   overflow: hidden;
-  background-color: #0b1120; /* Placeholder color while images load */
+  background-color: #0b1120; /* dark navy placeholder before image loads */
 }
 
 .card-media img {
-  width: 100%;
+  width: 100%;		/* forces image to fill 100% of space in container*/
   height: 100%;
   object-fit: cover;         /* Fills the 240px space without distorting */
   display: block;
 }
 
-/* =========================================
-   6. Card Body & Typography
-   ========================================= */
+/* -------6. Card Body & Typography------ */
 .card-body {
   padding: 1.5rem;
   display: flex;
@@ -106,8 +99,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  background-color: #334155;
-  color: #38bdf8;            /* Soft cyan accent */
+  background-color: #334155; /*dark slate */
+  color: #38bdf8;            /* Soft cyan */
   padding: 0.25rem 0.65rem;
   border-radius: 9999px;     /* Pill badge shape */
   margin-bottom: 0.75rem;
@@ -116,36 +109,35 @@ body {
 .card-title {
   font-size: 1.4rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #f8fafc;  /*bright white */
   margin-bottom: 0.25rem;
 }
 
 .release-info {
   font-size: 0.85rem;
-  color: #94a3b8;
+  color: #94a3b8;  /*slate-gray */
   margin-bottom: 1rem;
 }
 
 .card-description {
   font-size: 0.95rem;
-  color: #cbd5e1;
+  color: #cbd5e1;  /*soft gray*/
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
 
-/* =========================================
-   7. Expandable Content & Lists
-   ========================================= */
-.expandable-content h3 {
+/* -----7. Expandable Content & Lists------- */
+
+.expandable-content h3 {  /*feature heading for expandable content */
   font-size: 1rem;
-  color: #f1f5f9;
+  color: #f1f5f9;  /*bright off-white */
   margin-bottom: 0.5rem;
 }
 
-.expandable-content ul {
+.expandable-content ul {  
   list-style-position: inside;
   margin-bottom: 1.25rem;
-  color: #94a3b8;
+  color: #94a3b8;  /* multed slate, same as release date */
   font-size: 0.9rem;
 }
 
@@ -153,9 +145,8 @@ body {
   margin-bottom: 0.35rem;
 }
 
-/* =========================================
-   8. Toggle Button
-   ========================================= */
+/* -------8. Toggle Button------*/
+
 .toggle-btn {
   margin-top: auto;          /* Pins button cleanly to bottom */
   align-self: flex-start;
@@ -166,12 +157,12 @@ body {
   background-color: #2563eb; /* Vibrant blue */
   border: none;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: pointer;   /* changes user cursor to pointing hand for users to know its interactive*/
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .toggle-btn:hover {
-  background-color: #1d4ed8;
+  background-color: #1d4ed8;  /*deep blue when hovered for button to be clicked */
 }
 
 .toggle-btn:active {
